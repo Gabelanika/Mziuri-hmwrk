@@ -4,12 +4,36 @@ const titles = ["Fundamentals", "Crucial", "Core"];
 function getRandomInt() {
   return Math.floor(Math.random() * titles.length);
 }
+
+
+
+
+
+function CoreConcepts(props) {
+  return (
+    <li>
+      <img src="" alt=""placeholder="Concept Image" />
+      <h3>{props.title}</h3>
+      <p>{props.description}</p>
+    </li>
+  )
+    
+
+}
 function App() {
   return (
     <div>
     <Header/>
       <main>
-        <h2>Time to get started!</h2>
+        <section id = 'core-concepts'><h2>Core Concepts</h2>
+        <ul>
+          <CoreConcepts   title="Components" description="this is description for components"/>
+          <CoreConcepts    title="Components" description="this is description for props"/>
+          <CoreConcepts   title="Components" description="this is description for jsx"/> 
+          <CoreConcepts   title="Components" description="this is description for state"/> 
+        </ul>
+        </section>
+        
       </main>
     </div>
   );
