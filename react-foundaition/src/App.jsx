@@ -1,7 +1,7 @@
 import { jsx } from "react/jsx-runtime";
 import { CORE_CONCEPTS } from "./data";
 import Header from "./component/Header"
-
+import TabButton from "./components/TabButton"
 function CoreConcepts(props) {
   return (
     <li>
@@ -14,13 +14,6 @@ function CoreConcepts(props) {
 
 }
 
-function TabButton() {
-  return(
-    <li>
-      <button >click me</button>
-    </li>
-  )
-}
 
 function App() {
   return (
