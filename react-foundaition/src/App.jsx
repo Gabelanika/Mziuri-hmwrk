@@ -1,10 +1,6 @@
+import { jsx } from "react/jsx-runtime";
 import { CORE_CONCEPTS } from "./data";
-const titles = ["Fundamentals", "Crucial", "Core"];
-
-function getRandomInt() {
-  return Math.floor(Math.random() * titles.length);
-}
-
+import Header from "./component/Header"
 
 function CoreConcepts(props) {
   return (
@@ -17,6 +13,15 @@ function CoreConcepts(props) {
     
 
 }
+
+function TabButton() {
+  return(
+    <li>
+      <button >click me</button>
+    </li>
+  )
+}
+
 function App() {
   return (
     <div>
@@ -31,25 +36,20 @@ function App() {
           <CoreConcepts   title={CORE_CONCEPTS [3].title} description={CORE_CONCEPTS [3].description} image={CORE_CONCEPTS [3].image} />
         </ul>
         </section>
-        
+        <section id="examples">
+          <h2>Examples</h2>
+          <menu>
+            <TabButton />
+            <TabButton />
+            <TabButton />
+            <TabButton />
+          </menu>
+        </section>
       </main>
     </div>
   );
 }
-
+<Header/>
 export default App;
-  function Header() {
-  return(
-  <header>
-        <img src="src/assets/react-core-concepts.png" alt="Stylized atom" />
-        <h1>foundational React Essentials</h1>
-        <p>
-     {titles[getRandomInt()]} React concepts you will need for almost any app you are
-          going to build!
-        </p>
-      </header>
-  )
-}
-
-
+ 
 
