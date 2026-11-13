@@ -1,7 +1,7 @@
 import { jsx } from "react/jsx-runtime";
 import { CORE_CONCEPTS } from "./data";
-import Header from "./component/Header"
-import TabButton from "./components/TabButton"
+import Header from "./component/Header";
+import TabButton from "./component/TabButton";
 function CoreConcepts(props) {
   return (
     <li>
@@ -18,7 +18,8 @@ function CoreConcepts(props) {
 function App() {
   return (
     <div>
-    <Header/>
+    <Header title={"SHENGEL"}/>
+    <Header title={"Giusha"} />
       <main>
         <section id='core-concepts'>
           <h2>Core Concepts</h2>
@@ -32,17 +33,15 @@ function App() {
         <section id="examples">
           <h2>Examples</h2>
           <menu>
-            <TabButton />
-            <TabButton />
-            <TabButton />
-            <TabButton />
+            <TabButton title={ CORE_CONCEPTS [0].title} />
+            <TabButton title={ CORE_CONCEPTS [1].title}/>    
+            <TabButton title={ CORE_CONCEPTS [2].title}/>
+            <TabButton title={ CORE_CONCEPTS [3].title}/>
           </menu>
         </section>
       </main>
     </div>
   );
 }
-<Header/>
-export default App;
- 
 
+export default App;
