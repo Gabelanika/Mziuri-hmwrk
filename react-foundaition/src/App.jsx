@@ -15,7 +15,18 @@ function CoreConcepts(props) {
 }
 
 
+
+
 function App() {
+
+
+  let selectedTopic = "Please Choose A Topic";
+
+  function handleClick(value) {
+    selectedTopic = value;
+    console.log(selectedTopic);
+  }
+
   return (
     <div>
     <Header title={"SHENGEL"}/>
@@ -33,15 +44,20 @@ function App() {
         <section id="examples">
           <h2>Examples</h2>
           <menu>
-            <TabButton title={ CORE_CONCEPTS [0].title} />
-            <TabButton title={ CORE_CONCEPTS [1].title}/>    
-            <TabButton title={ CORE_CONCEPTS [2].title}/>
-            <TabButton title={ CORE_CONCEPTS [3].title}/>
+                <TabButton onSelect={() => handleClick("components")}>
+              components
+            </TabButton>
+            <TabButton onSelect={() => handleClick("jsx")}>jsx</TabButton>
+            <TabButton onSelect={() => handleClick("props")}>props</TabButton>
+            <TabButton onSelect={() => handleClick("state")}>state</TabButton>
           </menu>
         </section>
+         {selectedTopic}
       </main>
     </div>
   );
 }
+
+
 
 export default App;
